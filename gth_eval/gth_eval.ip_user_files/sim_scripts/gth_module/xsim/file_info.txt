@@ -1,0 +1,8 @@
+gtwizard_ultrascale_v1_7_gthe4_channel.v,verilog,xil_defaultlib,../../../../gth_eval.gen/sources_1/ip/gth_module/sim/gtwizard_ultrascale_v1_7_gthe4_channel.v,
+gth_module_gthe4_channel_wrapper.v,verilog,xil_defaultlib,../../../../gth_eval.gen/sources_1/ip/gth_module/sim/gth_module_gthe4_channel_wrapper.v,
+gtwizard_ultrascale_v1_7_gthe4_common.v,verilog,xil_defaultlib,../../../../gth_eval.gen/sources_1/ip/gth_module/sim/gtwizard_ultrascale_v1_7_gthe4_common.v,
+gth_module_gthe4_common_wrapper.v,verilog,xil_defaultlib,../../../../gth_eval.gen/sources_1/ip/gth_module/sim/gth_module_gthe4_common_wrapper.v,
+gth_module_gtwizard_gthe4.v,verilog,xil_defaultlib,../../../../gth_eval.gen/sources_1/ip/gth_module/sim/gth_module_gtwizard_gthe4.v,
+gth_module_gtwizard_top.v,verilog,xil_defaultlib,../../../../gth_eval.gen/sources_1/ip/gth_module/sim/gth_module_gtwizard_top.v,
+gth_module.v,verilog,xil_defaultlib,../../../../gth_eval.gen/sources_1/ip/gth_module/sim/gth_module.v,
+glbl.v,Verilog,xil_defaultlib,glbl.v
