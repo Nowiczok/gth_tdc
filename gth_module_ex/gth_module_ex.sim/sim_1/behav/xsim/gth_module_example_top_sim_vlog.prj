@@ -1,0 +1,25 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../imports" \
+"../../../../gth_module_ex.gen/sources_1/ip/gth_module/sim/gtwizard_ultrascale_v1_7_gthe4_channel.v" \
+"../../../../gth_module_ex.gen/sources_1/ip/gth_module/sim/gth_module_gthe4_channel_wrapper.v" \
+"../../../../gth_module_ex.gen/sources_1/ip/gth_module/sim/gtwizard_ultrascale_v1_7_gthe4_common.v" \
+"../../../../gth_module_ex.gen/sources_1/ip/gth_module/sim/gth_module_gthe4_common_wrapper.v" \
+"../../../../gth_module_ex.gen/sources_1/ip/gth_module/sim/gth_module_gtwizard_gthe4.v" \
+"../../../../gth_module_ex.gen/sources_1/ip/gth_module/sim/gth_module_gtwizard_top.v" \
+"../../../../gth_module_ex.gen/sources_1/ip/gth_module/sim/gth_module.v" \
+"../../../../gth_module_ex.gen/sources_1/ip/gth_module_vio_0/sim/gth_module_vio_0.v" \
+"../../../../imports/gth_module_example_bit_sync.v" \
+"../../../../imports/gth_module_example_checking_raw.v" \
+"../../../../imports/gth_module_example_init.v" \
+"../../../../imports/gth_module_example_reset_sync.v" \
+"../../../../imports/gth_module_example_stimulus_raw.v" \
+"../../../../imports/gth_module_example_top.v" \
+"../../../../imports/gth_module_example_wrapper.v" \
+"../../../../imports/gth_module_prbs_any.v" \
+"../../../../imports/gth_module_example_top_sim.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

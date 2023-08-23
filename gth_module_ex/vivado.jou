@@ -1,0 +1,19 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Sat Aug  5 19:03:20 2023
+# Process ID: 12336
+# Current directory: d:/fpga_projects/mgr/gth_module_ex
+# Command line: vivado.exe -notrace -source d:/fpga_projects/mgr/gth_eval/gth_eval.gen/sources_1/ip/gth_module/gth_module_ex.tcl
+# Log file: d:/fpga_projects/mgr/gth_module_ex/vivado.log
+# Journal file: d:/fpga_projects/mgr/gth_module_ex\vivado.jou
+# Running On: DESKTOP-P6SHRJL, OS: Windows, CPU Frequency: 2208 MHz, CPU Physical cores: 6, Host memory: 17047 MB
+#-----------------------------------------------------------
+start_gui
+source d:/fpga_projects/mgr/gth_eval/gth_eval.gen/sources_1/ip/gth_module/gth_module_ex.tcl -notrace
+update_compile_order -fileset sources_1
+launch_simulation
+source gth_module_example_top_sim.tcl
+run 10 us
+set_property dataflow_viewer_settings "min_width=16"   [current_fileset]

@@ -1,0 +1,2 @@
+gth_module_vio_0.v,verilog,xil_defaultlib,../../../../gth_module_ex.gen/sources_1/ip/gth_module_vio_0/sim/gth_module_vio_0.v,incdir="../../../../gth_module_ex.gen/sources_1/ip/gth_module_vio_0/hdl/verilog"incdir="../../../../gth_module_ex.gen/sources_1/ip/gth_module_vio_0/hdl"
+glbl.v,Verilog,xil_defaultlib,glbl.v
