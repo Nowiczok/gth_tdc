@@ -1,0 +1,2 @@
+vio_tx.v,verilog,xil_defaultlib,../../../../gth_eval.gen/sources_1/ip/vio_tx/sim/vio_tx.v,incdir="../../../../gth_eval.gen/sources_1/ip/vio_tx/hdl/verilog"incdir="../../../../gth_eval.gen/sources_1/ip/vio_tx/hdl"
+glbl.v,Verilog,xil_defaultlib,glbl.v

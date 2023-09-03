@@ -1,0 +1,6 @@
+verilog xil_defaultlib --include "../../../../gth_eval.gen/sources_1/ip/vio_tx/hdl/verilog" --include "../../../../gth_eval.gen/sources_1/ip/vio_tx/hdl" \
+"../../../../gth_eval.gen/sources_1/ip/vio_tx/sim/vio_tx.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort
