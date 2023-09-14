@@ -1,0 +1,241 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
+| Date         : Tue Sep 12 20:07:33 2023
+| Host         : DESKTOP-P6SHRJL running 64-bit major release  (build 9200)
+| Command      : report_methodology -file top_wrapper_methodology_drc_routed.rpt -pb top_wrapper_methodology_drc_routed.pb -rpx top_wrapper_methodology_drc_routed.rpx
+| Design       : top_wrapper
+| Device       : xczu7ev-ffvc1156-2-e
+| Speed File   : -2
+| Design State : Fully Routed
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 22
++-----------+------------------+------------------------------------------------+------------+
+| Rule      | Severity         | Description                                    | Violations |
++-----------+------------------+------------------------------------------------+------------+
+| AVAL-324  | Critical Warning | Hard_block_needs_LOC                           | 3          |
+| TIMING-6  | Critical Warning | No common primary clock between related clocks | 1          |
+| TIMING-7  | Critical Warning | No common node between related clocks          | 2          |
+| LUTAR-1   | Warning          | LUT drives async reset alert                   | 14         |
+| TIMING-9  | Warning          | Unknown CDC Logic                              | 1          |
+| TIMING-18 | Warning          | Missing input or output delay                  | 1          |
++-----------+------------------+------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+AVAL-324#1 Critical Warning
+Hard_block_needs_LOC  
+The hard block GTHE4_CHANNEL cell test_tx_INST/gth_INST/inst/gen_gtwizard_gthe4_top.gth_module_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[0].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/gthe4_channel_gen.gen_gthe4_channel_inst[0].GTHE4_CHANNEL_PRIM_INST is missing a valid LOC constraint for placement assignment, normally supplied by IP generation or manually assigned using the LOC property. Unguided placement of this block may cause problems in routing or other issues. Please check your design and set a valid LOC for this block to avoid these problems.
+Related violations: <none>
+
+AVAL-324#2 Critical Warning
+Hard_block_needs_LOC  
+The hard block IBUFDS_GTE4 cell rx_INST/IBUFDS_GTE4_MGTREFCLK0_X0Y0_INST is missing a valid LOC constraint for placement assignment, normally supplied by IP generation or manually assigned using the LOC property. Unguided placement of this block may cause problems in routing or other issues. Please check your design and set a valid LOC for this block to avoid these problems.
+Related violations: <none>
+
+AVAL-324#3 Critical Warning
+Hard_block_needs_LOC  
+The hard block IBUFDS_GTE4 cell test_tx_INST/IBUFDS_GTE4_MGTREFCLK0_X0Y0_INST is missing a valid LOC constraint for placement assignment, normally supplied by IP generation or manually assigned using the LOC property. Unguided placement of this block may cause problems in routing or other issues. Please check your design and set a valid LOC for this block to avoid these problems.
+Related violations: <none>
+
+TIMING-6#1 Critical Warning
+No common primary clock between related clocks  
+The clocks freerun_clk and gtwiz_userclk_rx_srcclk_out[0] are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks freerun_clk] -to [get_clocks gtwiz_userclk_rx_srcclk_out[0]]
+Related violations: <none>
+
+TIMING-7#1 Critical Warning
+No common node between related clocks  
+The clocks freerun_clk and gtwiz_userclk_rx_srcclk_out[0] are related (timed together) but they have no common node. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks freerun_clk] -to [get_clocks gtwiz_userclk_rx_srcclk_out[0]]
+Related violations: <none>
+
+TIMING-7#2 Critical Warning
+No common node between related clocks  
+The clocks gtwiz_userclk_tx_srcclk_out[0]_1 and gtwiz_userclk_rx_srcclk_out[0]_1 are related (timed together) but they have no common node. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks gtwiz_userclk_tx_srcclk_out[0]_1] -to [get_clocks gtwiz_userclk_rx_srcclk_out[0]_1]
+Related violations: <none>
+
+LUTAR-1#1 Warning
+LUT drives async reset alert  
+LUT cell dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_sel[0]_INST_0, with 2 or more inputs, drives asynchronous preset/clear pin(s) dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_CMD/iTARGET_reg[10]/CLR,
+dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_CMD/iTARGET_reg[11]/CLR,
+dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_CMD/iTARGET_reg[12]/CLR,
+dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_CMD/iTARGET_reg[13]/CLR,
+dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_CMD/iTARGET_reg[14]/CLR,
+dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_CMD/iTARGET_reg[15]/CLR,
+dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_CMD/iTARGET_reg[6]/CLR,
+dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_CMD/iTARGET_reg[7]/CLR,
+dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_CMD/iTARGET_reg[8]/CLR
+dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.U_ICON/U_CMD/iTARGET_reg[9]/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#2 Warning
+LUT drives async reset alert  
+LUT cell rx_INST/checksum_checker_INST_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) rx_INST/checksum_checker_INST/lost_packets_cnt_r_reg[12]/CLR,
+rx_INST/checksum_checker_INST/lost_packets_cnt_r_reg[13]/CLR,
+rx_INST/checksum_checker_INST/lost_packets_cnt_r_reg[14]/CLR,
+rx_INST/checksum_checker_INST/lost_packets_cnt_r_reg[15]/CLR,
+rx_INST/checksum_checker_INST/lost_packets_cnt_r_reg[1]/CLR,
+rx_INST/checksum_checker_INST/lost_packets_cnt_r_reg[2]/CLR,
+rx_INST/checksum_checker_INST/lost_packets_cnt_r_reg[3]/CLR,
+rx_INST/checksum_checker_INST/lost_packets_cnt_r_reg[4]/CLR,
+rx_INST/checksum_checker_INST/lost_packets_cnt_r_reg[5]/CLR,
+rx_INST/checksum_checker_INST/lost_packets_cnt_r_reg[6]/CLR,
+rx_INST/checksum_checker_INST/lost_packets_cnt_r_reg[7]/CLR,
+rx_INST/checksum_checker_INST/lost_packets_cnt_r_reg[8]/CLR,
+rx_INST/checksum_checker_INST/lost_packets_cnt_r_reg[9]/CLR,
+rx_INST/checksum_checker_INST/start_symbol_hit_prev_r_reg/CLR,
+rx_INST/checksum_checker_INST/start_symbol_hit_r_reg/CLR
+ (the first 15 of 139 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#3 Warning
+LUT drives async reset alert  
+LUT cell rx_INST/gth_INST/inst/gen_gtwizard_gthe4_top.gth_module_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_any_inst/rst_in_meta_i_1__1, with 2 or more inputs, drives asynchronous preset/clear pin(s) rx_INST/gth_INST/inst/gen_gtwizard_gthe4_top.gth_module_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_any_inst/rst_in_meta_reg/PRE,
+rx_INST/gth_INST/inst/gen_gtwizard_gthe4_top.gth_module_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_any_inst/rst_in_out_reg/PRE,
+rx_INST/gth_INST/inst/gen_gtwizard_gthe4_top.gth_module_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_any_inst/rst_in_sync1_reg/PRE,
+rx_INST/gth_INST/inst/gen_gtwizard_gthe4_top.gth_module_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_any_inst/rst_in_sync2_reg/PRE
+rx_INST/gth_INST/inst/gen_gtwizard_gthe4_top.gth_module_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_any_inst/rst_in_sync3_reg/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#4 Warning
+LUT drives async reset alert  
+LUT cell rx_INST/gth_INST/inst/gen_gtwizard_gthe4_top.gth_module_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_datapath_inst/rst_in_meta_i_1__3, with 2 or more inputs, drives asynchronous preset/clear pin(s) rx_INST/gth_INST/inst/gen_gtwizard_gthe4_top.gth_module_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_datapath_inst/rst_in_meta_reg/PRE,
+rx_INST/gth_INST/inst/gen_gtwizard_gthe4_top.gth_module_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_datapath_inst/rst_in_out_reg/PRE,
+rx_INST/gth_INST/inst/gen_gtwizard_gthe4_top.gth_module_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_datapath_inst/rst_in_sync1_reg/PRE,
+rx_INST/gth_INST/inst/gen_gtwizard_gthe4_top.gth_module_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_datapath_inst/rst_in_sync2_reg/PRE
+rx_INST/gth_INST/inst/gen_gtwizard_gthe4_top.gth_module_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_datapath_inst/rst_in_sync3_reg/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#5 Warning
+LUT drives async reset alert  
+LUT cell rx_INST/gth_INST/inst/gen_gtwizard_gthe4_top.gth_module_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_pll_and_datapath_inst/rst_in_meta_i_1__2, with 2 or more inputs, drives asynchronous preset/clear pin(s) rx_INST/gth_INST/inst/gen_gtwizard_gthe4_top.gth_module_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_pll_and_datapath_inst/rst_in_meta_reg/PRE,
+rx_INST/gth_INST/inst/gen_gtwizard_gthe4_top.gth_module_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_pll_and_datapath_inst/rst_in_out_reg/PRE,
+rx_INST/gth_INST/inst/gen_gtwizard_gthe4_top.gth_module_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_pll_and_datapath_inst/rst_in_sync1_reg/PRE,
+rx_INST/gth_INST/inst/gen_gtwizard_gthe4_top.gth_module_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_pll_and_datapath_inst/rst_in_sync2_reg/PRE
+rx_INST/gth_INST/inst/gen_gtwizard_gthe4_top.gth_module_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_pll_and_datapath_inst/rst_in_sync3_reg/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#6 Warning
+LUT drives async reset alert  
+LUT cell rx_INST/gth_INST/inst/gen_gtwizard_gthe4_top.gth_module_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_tx_any_inst/rst_in_meta_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) rx_INST/gth_INST/inst/gen_gtwizard_gthe4_top.gth_module_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_tx_any_inst/rst_in_meta_reg/PRE,
+rx_INST/gth_INST/inst/gen_gtwizard_gthe4_top.gth_module_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_tx_any_inst/rst_in_out_reg/PRE,
+rx_INST/gth_INST/inst/gen_gtwizard_gthe4_top.gth_module_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_tx_any_inst/rst_in_sync1_reg/PRE,
+rx_INST/gth_INST/inst/gen_gtwizard_gthe4_top.gth_module_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_tx_any_inst/rst_in_sync2_reg/PRE
+rx_INST/gth_INST/inst/gen_gtwizard_gthe4_top.gth_module_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_tx_any_inst/rst_in_sync3_reg/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#7 Warning
+LUT drives async reset alert  
+LUT cell rx_INST/gth_INST/inst/gen_gtwizard_gthe4_top.gth_module_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_tx_pll_and_datapath_inst/rst_in_meta_i_1__0, with 2 or more inputs, drives asynchronous preset/clear pin(s) rx_INST/gth_INST/inst/gen_gtwizard_gthe4_top.gth_module_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_tx_pll_and_datapath_inst/rst_in_meta_reg/PRE,
+rx_INST/gth_INST/inst/gen_gtwizard_gthe4_top.gth_module_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_tx_pll_and_datapath_inst/rst_in_out_reg/PRE,
+rx_INST/gth_INST/inst/gen_gtwizard_gthe4_top.gth_module_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_tx_pll_and_datapath_inst/rst_in_sync1_reg/PRE,
+rx_INST/gth_INST/inst/gen_gtwizard_gthe4_top.gth_module_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_tx_pll_and_datapath_inst/rst_in_sync2_reg/PRE
+rx_INST/gth_INST/inst/gen_gtwizard_gthe4_top.gth_module_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_tx_pll_and_datapath_inst/rst_in_sync3_reg/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#8 Warning
+LUT drives async reset alert  
+LUT cell rx_INST/gth_INST_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) rx_INST/gth_INST/inst/gen_gtwizard_gthe4_top.gth_module_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[0].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/BUFG_GT_SYNC_1/CLR,
+rx_INST/gth_INST/inst/gen_gtwizard_gthe4_top.gth_module_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_all_inst/rst_in_meta_reg/PRE,
+rx_INST/gth_INST/inst/gen_gtwizard_gthe4_top.gth_module_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_all_inst/rst_in_out_reg/PRE,
+rx_INST/gth_INST/inst/gen_gtwizard_gthe4_top.gth_module_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_all_inst/rst_in_sync1_reg/PRE,
+rx_INST/gth_INST/inst/gen_gtwizard_gthe4_top.gth_module_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_all_inst/rst_in_sync2_reg/PRE,
+rx_INST/gth_INST/inst/gen_gtwizard_gthe4_top.gth_module_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_all_inst/rst_in_sync3_reg/PRE,
+rx_INST/gth_INST/inst/gen_gtwizard_gthe4_top.gth_module_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_tx_datapath_inst/rst_in_meta_reg/PRE,
+rx_INST/gth_INST/inst/gen_gtwizard_gthe4_top.gth_module_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_tx_datapath_inst/rst_in_out_reg/PRE,
+rx_INST/gth_INST/inst/gen_gtwizard_gthe4_top.gth_module_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_tx_datapath_inst/rst_in_sync1_reg/PRE,
+rx_INST/gth_INST/inst/gen_gtwizard_gthe4_top.gth_module_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_tx_datapath_inst/rst_in_sync2_reg/PRE,
+rx_INST/gth_INST/inst/gen_gtwizard_gthe4_top.gth_module_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_tx_datapath_inst/rst_in_sync3_reg/PRE,
+rx_INST/gth_INST/inst/gen_gtwizard_gthe4_top.gth_module_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_rx_user_clocking_internal.gen_single_instance.gtwiz_userclk_rx_inst/gen_gtwiz_userclk_rx_main.gtwiz_userclk_rx_active_meta_reg/CLR,
+rx_INST/gth_INST/inst/gen_gtwizard_gthe4_top.gth_module_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_rx_user_clocking_internal.gen_single_instance.gtwiz_userclk_rx_inst/gen_gtwiz_userclk_rx_main.gtwiz_userclk_rx_active_sync_reg/CLR,
+rx_INST/gth_INST/inst/gen_gtwizard_gthe4_top.gth_module_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_tx_user_clocking_internal.gen_single_instance.gtwiz_userclk_tx_inst/gen_gtwiz_userclk_tx_main.gtwiz_userclk_tx_active_meta_reg/CLR,
+rx_INST/gth_INST/inst/gen_gtwizard_gthe4_top.gth_module_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_tx_user_clocking_internal.gen_single_instance.gtwiz_userclk_tx_inst/gen_gtwiz_userclk_tx_main.gtwiz_userclk_tx_active_sync_reg/CLR
+ (the first 15 of 16 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#9 Warning
+LUT drives async reset alert  
+LUT cell test_tx_INST/gth_INST/inst/gen_gtwizard_gthe4_top.gth_module_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_any_inst/rst_in_meta_i_1__1, with 2 or more inputs, drives asynchronous preset/clear pin(s) test_tx_INST/gth_INST/inst/gen_gtwizard_gthe4_top.gth_module_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_any_inst/rst_in_meta_reg/PRE,
+test_tx_INST/gth_INST/inst/gen_gtwizard_gthe4_top.gth_module_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_any_inst/rst_in_out_reg/PRE,
+test_tx_INST/gth_INST/inst/gen_gtwizard_gthe4_top.gth_module_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_any_inst/rst_in_sync1_reg/PRE,
+test_tx_INST/gth_INST/inst/gen_gtwizard_gthe4_top.gth_module_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_any_inst/rst_in_sync2_reg/PRE
+test_tx_INST/gth_INST/inst/gen_gtwizard_gthe4_top.gth_module_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_any_inst/rst_in_sync3_reg/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#10 Warning
+LUT drives async reset alert  
+LUT cell test_tx_INST/gth_INST/inst/gen_gtwizard_gthe4_top.gth_module_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_datapath_inst/rst_in_meta_i_1__3, with 2 or more inputs, drives asynchronous preset/clear pin(s) test_tx_INST/gth_INST/inst/gen_gtwizard_gthe4_top.gth_module_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_datapath_inst/rst_in_meta_reg/PRE,
+test_tx_INST/gth_INST/inst/gen_gtwizard_gthe4_top.gth_module_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_datapath_inst/rst_in_out_reg/PRE,
+test_tx_INST/gth_INST/inst/gen_gtwizard_gthe4_top.gth_module_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_datapath_inst/rst_in_sync1_reg/PRE,
+test_tx_INST/gth_INST/inst/gen_gtwizard_gthe4_top.gth_module_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_datapath_inst/rst_in_sync2_reg/PRE
+test_tx_INST/gth_INST/inst/gen_gtwizard_gthe4_top.gth_module_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_datapath_inst/rst_in_sync3_reg/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#11 Warning
+LUT drives async reset alert  
+LUT cell test_tx_INST/gth_INST/inst/gen_gtwizard_gthe4_top.gth_module_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_pll_and_datapath_inst/rst_in_meta_i_1__2, with 2 or more inputs, drives asynchronous preset/clear pin(s) test_tx_INST/gth_INST/inst/gen_gtwizard_gthe4_top.gth_module_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_pll_and_datapath_inst/rst_in_meta_reg/PRE,
+test_tx_INST/gth_INST/inst/gen_gtwizard_gthe4_top.gth_module_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_pll_and_datapath_inst/rst_in_out_reg/PRE,
+test_tx_INST/gth_INST/inst/gen_gtwizard_gthe4_top.gth_module_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_pll_and_datapath_inst/rst_in_sync1_reg/PRE,
+test_tx_INST/gth_INST/inst/gen_gtwizard_gthe4_top.gth_module_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_pll_and_datapath_inst/rst_in_sync2_reg/PRE
+test_tx_INST/gth_INST/inst/gen_gtwizard_gthe4_top.gth_module_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_rx_pll_and_datapath_inst/rst_in_sync3_reg/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#12 Warning
+LUT drives async reset alert  
+LUT cell test_tx_INST/gth_INST/inst/gen_gtwizard_gthe4_top.gth_module_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_tx_any_inst/rst_in_meta_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) test_tx_INST/gth_INST/inst/gen_gtwizard_gthe4_top.gth_module_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_tx_any_inst/rst_in_meta_reg/PRE,
+test_tx_INST/gth_INST/inst/gen_gtwizard_gthe4_top.gth_module_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_tx_any_inst/rst_in_out_reg/PRE,
+test_tx_INST/gth_INST/inst/gen_gtwizard_gthe4_top.gth_module_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_tx_any_inst/rst_in_sync1_reg/PRE,
+test_tx_INST/gth_INST/inst/gen_gtwizard_gthe4_top.gth_module_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_tx_any_inst/rst_in_sync2_reg/PRE
+test_tx_INST/gth_INST/inst/gen_gtwizard_gthe4_top.gth_module_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_tx_any_inst/rst_in_sync3_reg/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#13 Warning
+LUT drives async reset alert  
+LUT cell test_tx_INST/gth_INST/inst/gen_gtwizard_gthe4_top.gth_module_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_tx_pll_and_datapath_inst/rst_in_meta_i_1__0, with 2 or more inputs, drives asynchronous preset/clear pin(s) test_tx_INST/gth_INST/inst/gen_gtwizard_gthe4_top.gth_module_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_tx_pll_and_datapath_inst/rst_in_meta_reg/PRE,
+test_tx_INST/gth_INST/inst/gen_gtwizard_gthe4_top.gth_module_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_tx_pll_and_datapath_inst/rst_in_out_reg/PRE,
+test_tx_INST/gth_INST/inst/gen_gtwizard_gthe4_top.gth_module_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_tx_pll_and_datapath_inst/rst_in_sync1_reg/PRE,
+test_tx_INST/gth_INST/inst/gen_gtwizard_gthe4_top.gth_module_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_tx_pll_and_datapath_inst/rst_in_sync2_reg/PRE
+test_tx_INST/gth_INST/inst/gen_gtwizard_gthe4_top.gth_module_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_tx_pll_and_datapath_inst/rst_in_sync3_reg/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#14 Warning
+LUT drives async reset alert  
+LUT cell test_tx_INST/gth_INST_i_1__0, with 2 or more inputs, drives asynchronous preset/clear pin(s) test_tx_INST/gth_INST/inst/gen_gtwizard_gthe4_top.gth_module_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_channel_container[0].gen_enabled_channel.gthe4_channel_wrapper_inst/channel_inst/BUFG_GT_SYNC_1/CLR,
+test_tx_INST/gth_INST/inst/gen_gtwizard_gthe4_top.gth_module_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_all_inst/rst_in_meta_reg/PRE,
+test_tx_INST/gth_INST/inst/gen_gtwizard_gthe4_top.gth_module_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_all_inst/rst_in_out_reg/PRE,
+test_tx_INST/gth_INST/inst/gen_gtwizard_gthe4_top.gth_module_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_all_inst/rst_in_sync1_reg/PRE,
+test_tx_INST/gth_INST/inst/gen_gtwizard_gthe4_top.gth_module_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_all_inst/rst_in_sync2_reg/PRE,
+test_tx_INST/gth_INST/inst/gen_gtwizard_gthe4_top.gth_module_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_all_inst/rst_in_sync3_reg/PRE,
+test_tx_INST/gth_INST/inst/gen_gtwizard_gthe4_top.gth_module_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_tx_datapath_inst/rst_in_meta_reg/PRE,
+test_tx_INST/gth_INST/inst/gen_gtwizard_gthe4_top.gth_module_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_tx_datapath_inst/rst_in_out_reg/PRE,
+test_tx_INST/gth_INST/inst/gen_gtwizard_gthe4_top.gth_module_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_tx_datapath_inst/rst_in_sync1_reg/PRE,
+test_tx_INST/gth_INST/inst/gen_gtwizard_gthe4_top.gth_module_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_tx_datapath_inst/rst_in_sync2_reg/PRE,
+test_tx_INST/gth_INST/inst/gen_gtwizard_gthe4_top.gth_module_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_reset_controller_internal.gen_single_instance.gtwiz_reset_inst/reset_synchronizer_gtwiz_reset_tx_datapath_inst/rst_in_sync3_reg/PRE,
+test_tx_INST/gth_INST/inst/gen_gtwizard_gthe4_top.gth_module_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_tx_user_clocking_internal.gen_single_instance.gtwiz_userclk_tx_inst/gen_gtwiz_userclk_tx_main.gtwiz_userclk_tx_active_meta_reg/CLR
+test_tx_INST/gth_INST/inst/gen_gtwizard_gthe4_top.gth_module_gtwizard_gthe4_inst/gen_gtwizard_gthe4.gen_tx_user_clocking_internal.gen_single_instance.gtwiz_userclk_tx_inst/gen_gtwiz_userclk_tx_main.gtwiz_userclk_tx_active_sync_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+TIMING-9#1 Warning
+Unknown CDC Logic  
+One or more asynchronous Clock Domain Crossing has been detected between 2 clock domains through a set_false_path or a set_clock_groups or set_max_delay -datapath_only constraint but no double-registers logic synchronizer has been found on the side of the capture clock. It is recommended to run report_cdc for a complete and detailed CDC coverage. Please consider using XPM_CDC to avoid Critical severities
+Related violations: <none>
+
+TIMING-18#1 Warning
+Missing input or output delay  
+An input delay is missing on reset relative to clock(s) freerun_clk
+Related violations: <none>
+
+

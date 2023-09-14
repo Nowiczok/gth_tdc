@@ -1,0 +1,310 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Tue Sep 12 20:01:50 2023
+# Process ID: 24492
+# Current directory: D:/fpga_projects/mgr/gth_eval/gth_eval.runs/synth_1
+# Command line: vivado.exe -log top_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_wrapper.tcl
+# Log file: D:/fpga_projects/mgr/gth_eval/gth_eval.runs/synth_1/top_wrapper.vds
+# Journal file: D:/fpga_projects/mgr/gth_eval/gth_eval.runs/synth_1\vivado.jou
+# Running On: DESKTOP-P6SHRJL, OS: Windows, CPU Frequency: 2208 MHz, CPU Physical cores: 6, Host memory: 17047 MB
+#-----------------------------------------------------------
+Sourcing tcl script 'D:/Vivado_2/Vivado/2022.2/scripts/Vivado_init.tcl'
+source top_wrapper.tcl -notrace
+create_project: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 396.805 ; gain = 72.066
+Command: read_checkpoint -auto_incremental -incremental D:/fpga_projects/mgr/gth_eval/gth_eval.srcs/utils_1/imports/synth_1/top.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from D:/fpga_projects/mgr/gth_eval/gth_eval.srcs/utils_1/imports/synth_1/top.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top top_wrapper -part xczu7ev-ffvc1156-2-e
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu7ev'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu7ev'
+INFO: [Device 21-403] Loading part xczu7ev-ffvc1156-2-e
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 1692
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [D:/Vivado_2/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+INFO: [Synth 8-11241] undeclared symbol 'transmitter_good', assumed default net type 'wire' [D:/fpga_projects/mgr/gth_eval/gth_eval.srcs/sources_1/new/test_tx.sv:157]
+INFO: [Synth 8-11241] undeclared symbol 'mgtrefclk0_x0y0_int', assumed default net type 'wire' [D:/fpga_projects/mgr/gth_eval/gth_eval.srcs/sources_1/new/test_tx.sv:185]
+WARNING: [Synth 8-6901] identifier 'GTH_CH_NUM' is used before its declaration [D:/fpga_projects/mgr/gth_eval/gth_eval.srcs/sources_1/new/test_tx.sv:10]
+INFO: [Synth 8-11241] undeclared symbol 'mgtrefclk0_x0y0_int', assumed default net type 'wire' [D:/fpga_projects/mgr/gth_eval/gth_eval.srcs/sources_1/new/top.sv:158]
+WARNING: [Synth 8-6901] identifier 'GTH_CH_NUM' is used before its declaration [D:/fpga_projects/mgr/gth_eval/gth_eval.srcs/sources_1/new/top.sv:8]
+INFO: [Synth 8-11241] undeclared symbol 'userdata_rx_out', assumed default net type 'wire' [D:/fpga_projects/mgr/gth_eval/gth_eval.srcs/sources_1/new/top_wrapper.sv:39]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1925.250 ; gain = 338.988
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top_wrapper' [D:/fpga_projects/mgr/gth_eval/gth_eval.srcs/sources_1/new/top_wrapper.sv:9]
+INFO: [Synth 8-6157] synthesizing module 'top' [D:/fpga_projects/mgr/gth_eval/gth_eval.srcs/sources_1/new/top.sv:7]
+INFO: [Synth 8-6157] synthesizing module 'IBUFDS_GTE4' [D:/Vivado_2/Vivado/2022.2/scripts/rt/data/unisim_comp.v:71527]
+	Parameter REFCLK_EN_TX_PATH bound to: 1'b0 
+	Parameter REFCLK_HROW_CK_SEL bound to: 2'b00 
+	Parameter REFCLK_ICNTL_RX bound to: 2'b00 
+INFO: [Synth 8-6155] done synthesizing module 'IBUFDS_GTE4' (0#1) [D:/Vivado_2/Vivado/2022.2/scripts/rt/data/unisim_comp.v:71527]
+INFO: [Synth 8-6157] synthesizing module 'checksum_checker' [D:/fpga_projects/mgr/gth_eval/gth_eval.srcs/sources_1/new/checksum_checker.sv:9]
+	Parameter START_SYMBOL_BYTES_CNT bound to: 1 - type: integer 
+	Parameter FRAME_BYTES_CNT bound to: 4 - type: integer 
+	Parameter CHECKSUM_BYTES_CNT bound to: 1 - type: integer 
+	Parameter PCKT_NBR_BYTES_CNT bound to: 1 - type: integer 
+	Parameter PAYLOAD_BYTES_CNT bound to: 1 - type: integer 
+	Parameter MAX_FAILED_CRC_CNT bound to: 65536 - type: integer 
+	Parameter MAX_LOST_PCKT_CNT bound to: 65536 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'checksum_checker' (0#1) [D:/fpga_projects/mgr/gth_eval/gth_eval.srcs/sources_1/new/checksum_checker.sv:9]
+INFO: [Synth 8-6157] synthesizing module 'vio_0' [D:/fpga_projects/mgr/gth_eval/gth_eval.runs/synth_1/.Xil/Vivado-24492-DESKTOP-P6SHRJL/realtime/vio_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'vio_0' (0#1) [D:/fpga_projects/mgr/gth_eval/gth_eval.runs/synth_1/.Xil/Vivado-24492-DESKTOP-P6SHRJL/realtime/vio_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'gth_module' [D:/fpga_projects/mgr/gth_eval/gth_eval.runs/synth_1/.Xil/Vivado-24492-DESKTOP-P6SHRJL/realtime/gth_module_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'gth_module' (0#1) [D:/fpga_projects/mgr/gth_eval/gth_eval.runs/synth_1/.Xil/Vivado-24492-DESKTOP-P6SHRJL/realtime/gth_module_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'top' (0#1) [D:/fpga_projects/mgr/gth_eval/gth_eval.srcs/sources_1/new/top.sv:7]
+WARNING: [Synth 8-689] width (1) of port connection 'userdata_rx_out' does not match port width (32) of module 'top' [D:/fpga_projects/mgr/gth_eval/gth_eval.srcs/sources_1/new/top_wrapper.sv:39]
+INFO: [Synth 8-6157] synthesizing module 'test_tx' [D:/fpga_projects/mgr/gth_eval/gth_eval.srcs/sources_1/new/test_tx.sv:9]
+INFO: [Synth 8-6157] synthesizing module 'vio_tx' [D:/fpga_projects/mgr/gth_eval/gth_eval.runs/synth_1/.Xil/Vivado-24492-DESKTOP-P6SHRJL/realtime/vio_tx_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'vio_tx' (0#1) [D:/fpga_projects/mgr/gth_eval/gth_eval.runs/synth_1/.Xil/Vivado-24492-DESKTOP-P6SHRJL/realtime/vio_tx_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'test_tx' (0#1) [D:/fpga_projects/mgr/gth_eval/gth_eval.srcs/sources_1/new/test_tx.sv:9]
+INFO: [Synth 8-6155] done synthesizing module 'top_wrapper' (0#1) [D:/fpga_projects/mgr/gth_eval/gth_eval.srcs/sources_1/new/top_wrapper.sv:9]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'vio_0_INST'. This will prevent further optimization [D:/fpga_projects/mgr/gth_eval/gth_eval.srcs/sources_1/new/top.sv:207]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'checksum_checker_INST'. This will prevent further optimization [D:/fpga_projects/mgr/gth_eval/gth_eval.srcs/sources_1/new/top.sv:182]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'vio_tx_INST'. This will prevent further optimization [D:/fpga_projects/mgr/gth_eval/gth_eval.srcs/sources_1/new/test_tx.sv:194]
+WARNING: [Synth 8-3848] Net gtwiz_userclk_rx_reset_int in module/entity test_tx does not have driver. [D:/fpga_projects/mgr/gth_eval/gth_eval.srcs/sources_1/new/test_tx.sv:81]
+WARNING: [Synth 8-3848] Net gthrxn_in in module/entity test_tx does not have driver. [D:/fpga_projects/mgr/gth_eval/gth_eval.srcs/sources_1/new/test_tx.sv:93]
+WARNING: [Synth 8-3848] Net gthrxp_in in module/entity test_tx does not have driver. [D:/fpga_projects/mgr/gth_eval/gth_eval.srcs/sources_1/new/test_tx.sv:94]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 2018.156 ; gain = 431.895
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2018.156 ; gain = 431.895
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2018.156 ; gain = 431.895
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 2018.156 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [d:/fpga_projects/mgr/gth_eval/gth_eval.gen/sources_1/ip/gth_module/gth_module/gth_module_in_context.xdc] for cell 'rx_INST/gth_INST'
+create_clock: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 2106.699 ; gain = 19.637
+Finished Parsing XDC File [d:/fpga_projects/mgr/gth_eval/gth_eval.gen/sources_1/ip/gth_module/gth_module/gth_module_in_context.xdc] for cell 'rx_INST/gth_INST'
+Parsing XDC File [d:/fpga_projects/mgr/gth_eval/gth_eval.gen/sources_1/ip/gth_module/gth_module/gth_module_in_context.xdc] for cell 'test_tx_INST/gth_INST'
+Finished Parsing XDC File [d:/fpga_projects/mgr/gth_eval/gth_eval.gen/sources_1/ip/gth_module/gth_module/gth_module_in_context.xdc] for cell 'test_tx_INST/gth_INST'
+Parsing XDC File [d:/fpga_projects/mgr/gth_eval/gth_eval.gen/sources_1/ip/vio_0/vio_0/vio_0_in_context.xdc] for cell 'rx_INST/vio_0_INST'
+Finished Parsing XDC File [d:/fpga_projects/mgr/gth_eval/gth_eval.gen/sources_1/ip/vio_0/vio_0/vio_0_in_context.xdc] for cell 'rx_INST/vio_0_INST'
+Parsing XDC File [d:/fpga_projects/mgr/gth_eval/gth_eval.gen/sources_1/ip/vio_tx/vio_tx/vio_tx_in_context.xdc] for cell 'test_tx_INST/vio_tx_INST'
+Finished Parsing XDC File [d:/fpga_projects/mgr/gth_eval/gth_eval.gen/sources_1/ip/vio_tx/vio_tx/vio_tx_in_context.xdc] for cell 'test_tx_INST/vio_tx_INST'
+Parsing XDC File [D:/fpga_projects/mgr/gth_eval/gth_eval.srcs/constrs_1/new/top_constr.xdc]
+WARNING: [Vivado 12-584] No ports matched 'hb_gtwiz_reset_clk_freerun_in'. [D:/fpga_projects/mgr/gth_eval/gth_eval.srcs/constrs_1/new/top_constr.xdc:1]
+WARNING: [Vivado 12-584] No ports matched 'mgtrefclk0_x0y0_p'. [D:/fpga_projects/mgr/gth_eval/gth_eval.srcs/constrs_1/new/top_constr.xdc:2]
+Finished Parsing XDC File [D:/fpga_projects/mgr/gth_eval/gth_eval.srcs/constrs_1/new/top_constr.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [D:/fpga_projects/mgr/gth_eval/gth_eval.srcs/constrs_1/new/top_constr.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/top_wrapper_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/fpga_projects/mgr/gth_eval/gth_eval.srcs/constrs_1/new/top_constr.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2106.699 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 2106.699 ; gain = 0.000
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'rx_INST/vio_0_INST' at clock pin 'clk' is different from the actual clock period '2.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'test_tx_INST/vio_tx_INST' at clock pin 'clk' is different from the actual clock period '2.000', this can lead to different synthesis results.
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [D:/Vivado_2/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 2106.699 ; gain = 520.438
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xczu7ev-ffvc1156-2-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 2106.699 ; gain = 520.438
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for ch0_gthrxn_in. (constraint file  d:/fpga_projects/mgr/gth_eval/gth_eval.gen/sources_1/ip/gth_module/gth_module/gth_module_in_context.xdc, line 5).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ch0_gthrxn_in. (constraint file  d:/fpga_projects/mgr/gth_eval/gth_eval.gen/sources_1/ip/gth_module/gth_module/gth_module_in_context.xdc, line 6).
+Applied set_property IO_BUFFER_TYPE = NONE for ch0_gthrxp_in. (constraint file  d:/fpga_projects/mgr/gth_eval/gth_eval.gen/sources_1/ip/gth_module/gth_module/gth_module_in_context.xdc, line 7).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ch0_gthrxp_in. (constraint file  d:/fpga_projects/mgr/gth_eval/gth_eval.gen/sources_1/ip/gth_module/gth_module/gth_module_in_context.xdc, line 8).
+Applied set_property IO_BUFFER_TYPE = NONE for ch0_gthtxn_in. (constraint file  d:/fpga_projects/mgr/gth_eval/gth_eval.gen/sources_1/ip/gth_module/gth_module/gth_module_in_context.xdc, line 9).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ch0_gthtxn_in. (constraint file  d:/fpga_projects/mgr/gth_eval/gth_eval.gen/sources_1/ip/gth_module/gth_module/gth_module_in_context.xdc, line 10).
+Applied set_property IO_BUFFER_TYPE = NONE for ch0_gthtxp_in. (constraint file  d:/fpga_projects/mgr/gth_eval/gth_eval.gen/sources_1/ip/gth_module/gth_module/gth_module_in_context.xdc, line 11).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ch0_gthtxp_in. (constraint file  d:/fpga_projects/mgr/gth_eval/gth_eval.gen/sources_1/ip/gth_module/gth_module/gth_module_in_context.xdc, line 12).
+Applied set_property KEEP_HIERARCHY = SOFT for rx_INST/gth_INST. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for test_tx_INST/gth_INST. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for rx_INST/vio_0_INST. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for test_tx_INST/vio_tx_INST. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 2106.699 ; gain = 520.438
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 2106.699 ; gain = 520.438
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   16 Bit       Adders := 2     
+	   3 Input    8 Bit       Adders := 2     
+	   2 Input    8 Bit       Adders := 3     
++---Registers : 
+	               32 Bit    Registers := 2     
+	               16 Bit    Registers := 2     
+	                8 Bit    Registers := 7     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	  33 Input   32 Bit        Muxes := 1     
+	   2 Input   32 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 1728 (col length:144)
+BRAMs: 624 (col length: RAMB18 144 RAMB36 72)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:33 . Memory (MB): peak = 2106.699 ; gain = 520.438
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:43 ; elapsed = 00:00:51 . Memory (MB): peak = 2600.055 ; gain = 1013.793
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:47 ; elapsed = 00:00:56 . Memory (MB): peak = 2729.848 ; gain = 1143.586
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:47 ; elapsed = 00:00:56 . Memory (MB): peak = 2729.848 ; gain = 1143.586
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \test_tx_INST/gth_INST  has unconnected pin gtwiz_userclk_rx_reset_in[0]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \test_tx_INST/gth_INST  has unconnected pin gthrxn_in[0]
+CRITICAL WARNING: [Synth 8-4442] BlackBox module \test_tx_INST/gth_INST  has unconnected pin gthrxp_in[0]
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:52 ; elapsed = 00:01:02 . Memory (MB): peak = 2729.848 ; gain = 1143.586
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:52 ; elapsed = 00:01:02 . Memory (MB): peak = 2729.848 ; gain = 1143.586
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:52 ; elapsed = 00:01:02 . Memory (MB): peak = 2729.848 ; gain = 1143.586
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:52 ; elapsed = 00:01:02 . Memory (MB): peak = 2729.848 ; gain = 1143.586
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:52 ; elapsed = 00:01:02 . Memory (MB): peak = 2729.848 ; gain = 1143.586
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:52 ; elapsed = 00:01:02 . Memory (MB): peak = 2729.848 ; gain = 1143.586
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |vio_0         |         1|
+|2     |gth_module    |         2|
+|3     |vio_tx        |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+------------+------+
+|      |Cell        |Count |
++------+------------+------+
+|1     |gth_module  |     2|
+|3     |vio         |     1|
+|4     |vio_tx      |     1|
+|5     |CARRY8      |     4|
+|6     |IBUFDS_GTE4 |     2|
+|7     |LUT1        |     5|
+|8     |LUT2        |    54|
+|9     |LUT3        |    32|
+|10    |LUT4        |    26|
+|11    |LUT5        |    20|
+|12    |LUT6        |   146|
+|13    |MUXF7       |     1|
+|14    |FDCE        |   155|
+|15    |IBUF        |     2|
++------+------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:52 ; elapsed = 00:01:02 . Memory (MB): peak = 2729.848 ; gain = 1143.586
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 3 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:38 ; elapsed = 00:00:53 . Memory (MB): peak = 2729.848 ; gain = 1055.043
+Synthesis Optimization Complete : Time (s): cpu = 00:00:53 ; elapsed = 00:01:02 . Memory (MB): peak = 2729.848 ; gain = 1143.586
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 2729.848 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 7 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2741.855 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 2 instances were transformed.
+  IBUF => IBUF (IBUFCTRL, INBUF): 2 instances
+
+Synth Design complete, checksum: 876165e1
+INFO: [Common 17-83] Releasing license: Synthesis
+47 Infos, 12 Warnings, 3 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:02 ; elapsed = 00:01:14 . Memory (MB): peak = 2741.855 ; gain = 2271.598
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+INFO: [Common 17-1381] The checkpoint 'D:/fpga_projects/mgr/gth_eval/gth_eval.runs/synth_1/top_wrapper.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file top_wrapper_utilization_synth.rpt -pb top_wrapper_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Sep 12 20:03:16 2023...

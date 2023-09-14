@@ -3,7 +3,7 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="gth_sim_behav.wdb" id="1">
+      <db_ref path="gth_sim_func_synth.wdb" id="1">
          <top_modules>
             <top_module name="glbl" />
             <top_module name="gth_sim" />
@@ -12,86 +12,51 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0.000000000 us"></ZoomStartTime>
-      <ZoomEndTime time="22.530000001 us"></ZoomEndTime>
+      <ZoomEndTime time="23.639749072 us"></ZoomEndTime>
       <Cursor1Time time="11.000000000 us"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="340"></NameColumnWidth>
-      <ValueColumnWidth column_width="155"></ValueColumnWidth>
+      <ValueColumnWidth column_width="150"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="2" />
    <wvobject fp_name="group25" type="group">
       <obj_property name="label">tx</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <wvobject fp_name="/gth_sim/test_tx_INST/mgtrefclk0_x0y0_p" type="logic">
-         <obj_property name="ElementShortName">mgtrefclk0_x0y0_p</obj_property>
-         <obj_property name="ObjectShortName">mgtrefclk0_x0y0_p</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/gth_sim/DUT/test_tx_INST/vio_tx_INST/clk" type="logic">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
       </wvobject>
-      <wvobject fp_name="/gth_sim/test_tx_INST/mgtrefclk0_x0y0_n" type="logic">
-         <obj_property name="ElementShortName">mgtrefclk0_x0y0_n</obj_property>
-         <obj_property name="ObjectShortName">mgtrefclk0_x0y0_n</obj_property>
+      <wvobject fp_name="/gth_sim/DUT/test_tx_INST/vio_tx_INST/probe_in0" type="array">
+         <obj_property name="ElementShortName">probe_in0[0:0]</obj_property>
+         <obj_property name="ObjectShortName">probe_in0[0:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/gth_sim/test_tx_INST/ch0_gthtxn_in" type="logic">
-         <obj_property name="ElementShortName">ch0_gthtxn_in</obj_property>
-         <obj_property name="ObjectShortName">ch0_gthtxn_in</obj_property>
+      <wvobject fp_name="/gth_sim/DUT/test_tx_INST/vio_tx_INST/probe_in1" type="array">
+         <obj_property name="ElementShortName">probe_in1[7:0]</obj_property>
+         <obj_property name="ObjectShortName">probe_in1[7:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/gth_sim/test_tx_INST/ch0_gthtxp_in" type="logic">
-         <obj_property name="ElementShortName">ch0_gthtxp_in</obj_property>
-         <obj_property name="ObjectShortName">ch0_gthtxp_in</obj_property>
+      <wvobject fp_name="/gth_sim/DUT/test_tx_INST/vio_tx_INST/probe_in2" type="array">
+         <obj_property name="ElementShortName">probe_in2[0:0]</obj_property>
+         <obj_property name="ObjectShortName">probe_in2[0:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/gth_sim/test_tx_INST/hb_gtwiz_reset_clk_freerun_in" type="logic">
-         <obj_property name="ElementShortName">hb_gtwiz_reset_clk_freerun_in</obj_property>
-         <obj_property name="ObjectShortName">hb_gtwiz_reset_clk_freerun_in</obj_property>
+      <wvobject fp_name="/gth_sim/DUT/test_tx_INST/vio_tx_INST/probe_out0" type="array">
+         <obj_property name="ElementShortName">probe_out0[0:0]</obj_property>
+         <obj_property name="ObjectShortName">probe_out0[0:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/gth_sim/test_tx_INST/hb_gtwiz_reset_all_in" type="logic">
-         <obj_property name="ElementShortName">hb_gtwiz_reset_all_in</obj_property>
-         <obj_property name="ObjectShortName">hb_gtwiz_reset_all_in</obj_property>
+      <wvobject fp_name="/gth_sim/DUT/test_tx_INST/vio_tx_INST/sl_iport0" type="array">
+         <obj_property name="ElementShortName">sl_iport0[36:0]</obj_property>
+         <obj_property name="ObjectShortName">sl_iport0[36:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/gth_sim/test_tx_INST/frame_rate_cnt_en_c" type="logic">
-         <obj_property name="ElementShortName">frame_rate_cnt_en_c</obj_property>
-         <obj_property name="ObjectShortName">frame_rate_cnt_en_c</obj_property>
-      </wvobject>
-      <wvobject fp_name="/gth_sim/test_tx_INST/frame_rate_cnt_nxt_c" type="array">
-         <obj_property name="ElementShortName">frame_rate_cnt_nxt_c[7:0]</obj_property>
-         <obj_property name="ObjectShortName">frame_rate_cnt_nxt_c[7:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/gth_sim/test_tx_INST/frame_rate_cnt_r" type="array">
-         <obj_property name="ElementShortName">frame_rate_cnt_r[7:0]</obj_property>
-         <obj_property name="ObjectShortName">frame_rate_cnt_r[7:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/gth_sim/test_tx_INST/data_to_transmit" type="array">
-         <obj_property name="ElementShortName">data_to_transmit[31:0]</obj_property>
-         <obj_property name="ObjectShortName">data_to_transmit[31:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/gth_sim/test_tx_INST/gtwiz_userdata_tx_in" type="array">
-         <obj_property name="ElementShortName">gtwiz_userdata_tx_in[31:0]</obj_property>
-         <obj_property name="ObjectShortName">gtwiz_userdata_tx_in[31:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/gth_sim/test_tx_INST/frame_cnt_en_c" type="logic">
-         <obj_property name="ElementShortName">frame_cnt_en_c</obj_property>
-         <obj_property name="ObjectShortName">frame_cnt_en_c</obj_property>
-      </wvobject>
-      <wvobject fp_name="/gth_sim/test_tx_INST/frame_cnt_nxt_c" type="array">
-         <obj_property name="ElementShortName">frame_cnt_nxt_c[7:0]</obj_property>
-         <obj_property name="ObjectShortName">frame_cnt_nxt_c[7:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/gth_sim/test_tx_INST/frame_cnt_r" type="array">
-         <obj_property name="ElementShortName">frame_cnt_r[7:0]</obj_property>
-         <obj_property name="ObjectShortName">frame_cnt_r[7:0]</obj_property>
+      <wvobject fp_name="/gth_sim/DUT/test_tx_INST/vio_tx_INST/sl_oport0" type="array">
+         <obj_property name="ElementShortName">sl_oport0[16:0]</obj_property>
+         <obj_property name="ObjectShortName">sl_oport0[16:0]</obj_property>
       </wvobject>
    </wvobject>
    <wvobject fp_name="group32" type="group">
       <obj_property name="label">rx</obj_property>
       <obj_property name="DisplayName">label</obj_property>
       <obj_property name="isExpanded"></obj_property>
-      <wvobject fp_name="/gth_sim/DUT/mgtrefclk0_x0y0_p" type="logic">
-         <obj_property name="ElementShortName">mgtrefclk0_x0y0_p</obj_property>
-         <obj_property name="ObjectShortName">mgtrefclk0_x0y0_p</obj_property>
-      </wvobject>
-      <wvobject fp_name="/gth_sim/DUT/mgtrefclk0_x0y0_n" type="logic">
-         <obj_property name="ElementShortName">mgtrefclk0_x0y0_n</obj_property>
-         <obj_property name="ObjectShortName">mgtrefclk0_x0y0_n</obj_property>
-      </wvobject>
       <wvobject fp_name="/gth_sim/DUT/ch0_gthrxp_in" type="logic">
          <obj_property name="ElementShortName">ch0_gthrxp_in</obj_property>
          <obj_property name="ObjectShortName">ch0_gthrxp_in</obj_property>
@@ -100,57 +65,45 @@
          <obj_property name="ElementShortName">ch0_gthrxn_in</obj_property>
          <obj_property name="ObjectShortName">ch0_gthrxn_in</obj_property>
       </wvobject>
-      <wvobject fp_name="/gth_sim/DUT/hb_gtwiz_reset_clk_freerun_in" type="logic">
-         <obj_property name="ElementShortName">hb_gtwiz_reset_clk_freerun_in</obj_property>
-         <obj_property name="ObjectShortName">hb_gtwiz_reset_clk_freerun_in</obj_property>
-      </wvobject>
-      <wvobject fp_name="/gth_sim/DUT/hb_gtwiz_reset_all_in" type="logic">
-         <obj_property name="ElementShortName">hb_gtwiz_reset_all_in</obj_property>
-         <obj_property name="ObjectShortName">hb_gtwiz_reset_all_in</obj_property>
-      </wvobject>
-      <wvobject fp_name="/gth_sim/DUT/userdata_rx_out" type="array">
-         <obj_property name="ElementShortName">userdata_rx_out[31:0]</obj_property>
-         <obj_property name="ObjectShortName">userdata_rx_out[31:0]</obj_property>
-      </wvobject>
       <wvobject fp_name="group40" type="group">
          <obj_property name="label">checksum_checker</obj_property>
          <obj_property name="DisplayName">label</obj_property>
          <obj_property name="isExpanded"></obj_property>
-         <wvobject fp_name="/gth_sim/DUT/checksum_checker_INST/clk" type="logic">
+         <wvobject fp_name="/gth_sim/DUT/rx_INST/vio_0_INST/clk" type="logic">
             <obj_property name="ElementShortName">clk</obj_property>
             <obj_property name="ObjectShortName">clk</obj_property>
          </wvobject>
-         <wvobject fp_name="/gth_sim/DUT/checksum_checker_INST/en" type="logic">
-            <obj_property name="ElementShortName">en</obj_property>
-            <obj_property name="ObjectShortName">en</obj_property>
+         <wvobject fp_name="/gth_sim/DUT/rx_INST/vio_0_INST/probe_in0" type="array">
+            <obj_property name="ElementShortName">probe_in0[0:0]</obj_property>
+            <obj_property name="ObjectShortName">probe_in0[0:0]</obj_property>
          </wvobject>
-         <wvobject fp_name="/gth_sim/DUT/checksum_checker_INST/nrst" type="logic">
-            <obj_property name="ElementShortName">nrst</obj_property>
-            <obj_property name="ObjectShortName">nrst</obj_property>
+         <wvobject fp_name="/gth_sim/DUT/rx_INST/vio_0_INST/probe_in1" type="array">
+            <obj_property name="ElementShortName">probe_in1[15:0]</obj_property>
+            <obj_property name="ObjectShortName">probe_in1[15:0]</obj_property>
          </wvobject>
-         <wvobject fp_name="/gth_sim/DUT/checksum_checker_INST/frame_data" type="array">
-            <obj_property name="ElementShortName">frame_data[31:0]</obj_property>
-            <obj_property name="ObjectShortName">frame_data[31:0]</obj_property>
+         <wvobject fp_name="/gth_sim/DUT/rx_INST/vio_0_INST/probe_in2" type="array">
+            <obj_property name="ElementShortName">probe_in2[15:0]</obj_property>
+            <obj_property name="ObjectShortName">probe_in2[15:0]</obj_property>
          </wvobject>
-         <wvobject fp_name="/gth_sim/DUT/checksum_checker_INST/frame_received" type="logic">
-            <obj_property name="ElementShortName">frame_received</obj_property>
-            <obj_property name="ObjectShortName">frame_received</obj_property>
+         <wvobject fp_name="/gth_sim/DUT/rx_INST/vio_0_INST/probe_in3" type="array">
+            <obj_property name="ElementShortName">probe_in3[15:0]</obj_property>
+            <obj_property name="ObjectShortName">probe_in3[15:0]</obj_property>
          </wvobject>
-         <wvobject fp_name="/gth_sim/DUT/checksum_checker_INST/failed_crc_cnt" type="array">
-            <obj_property name="ElementShortName">failed_crc_cnt[15:0]</obj_property>
-            <obj_property name="ObjectShortName">failed_crc_cnt[15:0]</obj_property>
+         <wvobject fp_name="/gth_sim/DUT/rx_INST/vio_0_INST/probe_in4" type="array">
+            <obj_property name="ElementShortName">probe_in4[0:0]</obj_property>
+            <obj_property name="ObjectShortName">probe_in4[0:0]</obj_property>
          </wvobject>
-         <wvobject fp_name="/gth_sim/DUT/checksum_checker_INST/lost_packets_cnt" type="array">
-            <obj_property name="ElementShortName">lost_packets_cnt[15:0]</obj_property>
-            <obj_property name="ObjectShortName">lost_packets_cnt[15:0]</obj_property>
+         <wvobject fp_name="/gth_sim/DUT/rx_INST/vio_0_INST/probe_out0" type="array">
+            <obj_property name="ElementShortName">probe_out0[0:0]</obj_property>
+            <obj_property name="ObjectShortName">probe_out0[0:0]</obj_property>
          </wvobject>
-         <wvobject fp_name="/gth_sim/DUT/checksum_checker_INST/last_packet_number" type="array">
-            <obj_property name="ElementShortName">last_packet_number[7:0]</obj_property>
-            <obj_property name="ObjectShortName">last_packet_number[7:0]</obj_property>
+         <wvobject fp_name="/gth_sim/DUT/rx_INST/vio_0_INST/sl_iport0" type="array">
+            <obj_property name="ElementShortName">sl_iport0[36:0]</obj_property>
+            <obj_property name="ObjectShortName">sl_iport0[36:0]</obj_property>
          </wvobject>
-         <wvobject fp_name="/gth_sim/DUT/checksum_checker_INST/two_frames_c" type="array">
-            <obj_property name="ElementShortName">two_frames_c[63:0]</obj_property>
-            <obj_property name="ObjectShortName">two_frames_c[63:0]</obj_property>
+         <wvobject fp_name="/gth_sim/DUT/rx_INST/vio_0_INST/sl_oport0" type="array">
+            <obj_property name="ElementShortName">sl_oport0[16:0]</obj_property>
+            <obj_property name="ObjectShortName">sl_oport0[16:0]</obj_property>
          </wvobject>
       </wvobject>
    </wvobject>

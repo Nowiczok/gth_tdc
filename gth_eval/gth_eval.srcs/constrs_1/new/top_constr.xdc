@@ -1,0 +1,11 @@
+create_clock -period 4.000 -name hb_gtwiz_reset_clk_freerun_in -waveform {0.000 2.000} [get_ports hb_gtwiz_reset_clk_freerun_in]
+create_clock -period 10.000 -name mgtrefclk0_x0y0_p -waveform {0.000 5.000} [get_ports mgtrefclk0_x0y0_p]
+connect_debug_port dbg_hub/clk [get_nets gtwiz_userclk_rx_usrclk2_int]
+
+create_clock -period 4.000 -name freerun_clk -waveform {0.000 2.000} [get_ports freerun_clk]
+create_clock -period 10.000 -name ref_clk_rx_p -waveform {0.000 5.000} [get_ports ref_clk_rx_p]
+create_clock -period 10.000 -name ref_clk_tx_p -waveform {0.000 5.000} [get_ports ref_clk_tx_p]
+set_property C_CLK_INPUT_FREQ_HZ 300000000 [get_debug_cores dbg_hub]
+set_property C_ENABLE_CLK_DIVIDER false [get_debug_cores dbg_hub]
+set_property C_USER_SCAN_CHAIN 1 [get_debug_cores dbg_hub]
+connect_debug_port dbg_hub/clk [get_nets clk]

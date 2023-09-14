@@ -1,0 +1,9 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../../gth_eval.srcs/sources_1/new" \
+"gth_sim_func_synth.v" \
+
+sv xil_defaultlib  --include "../../../../../gth_eval.srcs/sources_1/new" \
+"../../../../../gth_eval.srcs/sim_1/new/gth_sim.sv" \
+
+# Do not sort compile order
+nosort
